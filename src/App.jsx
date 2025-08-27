@@ -1,10 +1,5 @@
-import React, { useEffect } from 'react';
+﻿import React, { useEffect } from 'react';
 
-// This component is self-contained. You can save it as e.g., src/pages/HomePage.jsx
-// and import it into your main App.jsx file to use it.
-// Ensure you have Tailwind CSS configured in your Vite project.
-
-// Reusable component for fade-in-on-scroll animations
 const AnimatedSection = ({ children, className = '' }) => {
   const ref = React.useRef(null);
   const [isVisible, setIsVisible] = React.useState(false);
@@ -37,17 +32,13 @@ const AnimatedSection = ({ children, className = '' }) => {
   return (
     <div
       ref={ref}
-      className={`${className} transition-opacity duration-700 ease-out ${
-        isVisible ? 'opacity-100' : 'opacity-0 translate-y-5'
-      }`}
+      className={${className} transition-opacity duration-700 ease-out }
     >
       {children}
     </div>
   );
 };
 
-
-// Main Component
 export default function UsInContextPage() {
     useEffect(() => {
         const mobileMenuButton = document.getElementById('mobile-menu-button');
@@ -67,15 +58,10 @@ export default function UsInContextPage() {
 
     return (
         <div className="bg-white font-sans text-[#111827] antialiased">
-            {/* HEADER & NAVIGATION */}
             <header id="navbar" className="bg-white/95 backdrop-blur-lg sticky top-0 z-50 border-b border-gray-200">
                 <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
                     <a href="#" className="flex items-center space-x-3">
-                        <svg className="w-10 h-10" viewBox="0 0 42 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M21.5 13.5C23.9853 13.5 26 11.4853 26 9C26 6.51472 23.9853 4.5 21.5 4.5C19.0147 4.5 17 6.51472 17 9C17 11.4853 19.0147 13.5 21.5 13.5Z" fill="#A9B4C2"/>
-                            <path d="M26.6667 35.5C29.4286 35.5 31.6667 30.3741 31.6667 24C31.6667 17.6259 29.4286 12.5 26.6667 12.5C23.9048 12.5 21.6667 17.6259 21.6667 24C21.6667 30.3741 23.9048 35.5 26.6667 35.5Z" fill="#2E3A48"/>
-                            <path d="M16.3333 35.5C19.0952 35.5 21.3333 30.3741 21.3333 24C21.3333 17.6259 19.0952 12.5 16.3333 12.5C13.5714 12.5 11.3333 17.6259 11.3333 24C11.3333 30.3741 13.5714 35.5 16.3333 35.5Z" fill="#A9B4C2" fillOpacity="0.8"/>
-                        </svg>
+                        <img src="/logo.jpg" alt="Us In Context Logo" className="w-12 h-12 object-contain" />
                         <div className="flex flex-col justify-center">
                             <div className="text-xl font-bold text-gray-900 tracking-wide leading-tight">Us In Context</div>
                             <div className="text-[10px] text-gray-500 tracking-widest leading-tight">CONNECTING PERSPECTIVES</div>
@@ -100,16 +86,22 @@ export default function UsInContextPage() {
             </header>
 
             <main>
-                {/* HERO SECTION */}
-                <section id="home" className="bg-black py-24 md:py-40 text-white">
-                    <div className="container mx-auto px-6 text-center">
+                <section id="home" className="relative py-24 md:py-40 text-white">
+                    <div 
+                        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                        style={{
+                            backgroundImage: 'url(/hero-bg.png )',
+                        }}
+                    >
+                        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+                    </div>
+                    <div className="container mx-auto px-6 text-center relative z-10">
                         <h1 className="text-4xl md:text-6xl font-bold leading-tight max-w-4xl mx-auto font-serif">Insightful Analysis for the Engaged Citizen.</h1>
                         <p className="text-lg md:text-xl text-gray-300 mt-6 max-w-2xl mx-auto">We move beyond the headlines to explore the underlying systems shaping our society with clarity and realism.</p>
                         <a href="#premium" className="mt-8 inline-block bg-white text-black font-semibold px-8 py-3 rounded-md hover:bg-gray-200 transition-colors">Go Premium</a>
                     </div>
                 </section>
 
-                {/* LATEST ARTICLES SECTION */}
                 <AnimatedSection>
                     <section id="latest" className="py-20 md:py-28 bg-white">
                         <div className="container mx-auto px-6">
@@ -123,28 +115,27 @@ export default function UsInContextPage() {
                                         <p className="text-gray-600">An examination of how profit-driven strategies impact society beyond the balance sheet.</p>
                                     </div>
                                 </a>
-                                <a href="#" className="article-card block bg-white rounded-lg overflow-hidden border border-gray-200">
-                                    <div className="overflow-hidden"><img src="https://images.unsplash.com/photo-1528642474498-1af5a7220263?q=80&w=1920&auto=format&fit=crop" alt="Government building" className="w-full h-48 object-cover" /></div>
+                                <div className="article-card block bg-white rounded-lg overflow-hidden border border-gray-200">
+                                    <div className="overflow-hidden"><img src="/political_insights_wip.png" alt="Political Insights - Coming Soon" className="w-full h-48 object-cover" /></div>
                                     <div className="p-6">
-                                        <p className="text-sm font-semibold text-red-600 mb-2">POLITICAL INSIGHTS</p>
-                                        <h3 className="text-xl font-bold mb-3 font-serif">The Erosion of Democratic Norms</h3>
-                                        <p className="text-gray-600">Delving into the subtle and overt shifts threatening the foundations of governance.</p>
+                                        <p className="text-sm font-semibold text-purple-600 mb-2">POLITICAL INSIGHTS</p>
+                                        <h3 className="text-xl font-bold mb-3 font-serif">Watch this space</h3>
+                                        <p className="text-gray-600">Exciting political analysis content is coming soon. Stay tuned for in-depth insights.</p>
                                     </div>
-                                </a>
-                                <a href="#" className="article-card block bg-white rounded-lg overflow-hidden border border-gray-200">
-                                    <div className="overflow-hidden"><img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=1920&auto=format&fit=crop" alt="Forest landscape" className="w-full h-48 object-cover" /></div>
+                                </div>
+                                <div className="article-card block bg-white rounded-lg overflow-hidden border border-gray-200">
+                                    <div className="overflow-hidden"><img src="/social_responsibility_wip.png" alt="Social Responsibility - Coming Soon" className="w-full h-48 object-cover" /></div>
                                     <div className="p-6">
-                                        <p className="text-sm font-semibold text-green-600 mb-2">SOCIAL RESPONSIBILITY</p>
-                                        <h3 className="text-xl font-bold mb-3 font-serif">Corporate Accountability in Climate Action</h3>
-                                        <p className="text-gray-600">Who is truly responsible for protecting our planet, and who is prioritizing profit?</p>
+                                        <p className="text-sm font-semibold text-orange-600 mb-2">SOCIAL RESPONSIBILITY</p>
+                                        <h3 className="text-xl font-bold mb-3 font-serif">Watch this space</h3>
+                                        <p className="text-gray-600">Comprehensive social responsibility analysis is in development. Check back soon.</p>
                                     </div>
-                                </a>
+                                </div>
                             </div>
                         </div>
                     </section>
                 </AnimatedSection>
                 
-                {/* PREMIUM SECTION */}
                 <AnimatedSection>
                     <section id="premium" className="py-20 md:py-28 bg-gray-50">
                         <div className="container mx-auto px-6 text-center">
@@ -186,7 +177,6 @@ export default function UsInContextPage() {
                     </section>
                 </AnimatedSection>
                 
-                {/* ABOUT SECTION */}
                 <AnimatedSection>
                     <section id="about" className="py-20 md:py-28 bg-white">
                         <div className="container mx-auto px-6 text-center">
@@ -199,7 +189,6 @@ export default function UsInContextPage() {
                     </section>
                 </AnimatedSection>
 
-                {/* CONTACT SECTION */}
                 <AnimatedSection>
                     <section id="contact" className="py-20 md:py-28 bg-gray-50">
                         <div className="container mx-auto px-6">
@@ -211,13 +200,13 @@ export default function UsInContextPage() {
                                         <p className="flex items-center"><svg className="w-5 h-5 mr-3 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>contact@usincontext.com</p>
                                     </div>
                                 </div>
-                                <div className="bg-white p-8 rounded-lg shadow-md border">
-                                    <form>
-                                        <div className="mb-5">
-                                            <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-700">Email Address</label>
-                                            <input type="email" id="email" className="block w-full p-3 text-gray-900 border border-gray-300 rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500" placeholder="your.email@example.com" />
+                                <div className="bg-white p-8 rounded-lg shadow-lg">
+                                    <form className="space-y-6">
+                                        <div>
+                                            <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                                            <input type="email" id="email" name="email" className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="your@email.com" />
                                         </div>
-                                        <button type="submit" className="w-full bg-black text-white font-semibold px-5 py-3 rounded-lg hover:bg-gray-800 transition-colors">Subscribe</button>
+                                        <button type="submit" className="w-full bg-blue-600 text-white font-semibold px-6 py-3 rounded-md hover:bg-blue-700 transition-colors">Subscribe</button>
                                     </form>
                                 </div>
                             </div>
@@ -225,34 +214,6 @@ export default function UsInContextPage() {
                     </section>
                 </AnimatedSection>
             </main>
-
-            {/* FOOTER */}
-            <footer className="bg-white border-t border-gray-200">
-                <div className="container mx-auto px-6 py-10">
-                    <div className="text-center">
-                        <h3 className="font-semibold text-gray-800 mb-4">Connect With Us</h3>
-                        <div className="flex justify-center space-x-6">
-                            <a href="https://www.youtube.com/@usincontext" target="_blank" rel="noopener noreferrer" title="YouTube" className="social-icon text-gray-500 hover:text-[#FF0000]">
-                                <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22.96.26 1.47.05.87.06 1.74.06 2.62s0 1.75-.06 2.62c-.04.51-.13 1-.26 1.47-.25.9-.83 1.48-1.73 1.73-.47.13-.96.22-1.47.26-.87.05-1.74.06-2.62.06s-1.75 0-2.62-.06c-.51-.04-1-.13-1.47-.26-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-.96-.26-1.47-.05-.87-.06-1.74-.06-2.62s0-1.75.06-2.62c.04-.51.13-1 .26-1.47.25-.9.83-1.48 1.73-1.73.47-.13.96-.22 1.47-.26.87-.05 1.74-.06 2.62-.06s1.75 0 2.62.06c.51.04 1 .13 1.47.26.9.25 1.48.83 1.73 1.73z"/></svg>
-                            </a>
-                            <a href="https://www.instagram.com/usincontext" target="_blank" rel="noopener noreferrer" title="Instagram" className="social-icon text-gray-500 hover:text-pink-600">
-                                <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg>
-                            </a>
-                            <a href="https://www.tiktok.com/@usincontext" target="_blank" rel="noopener noreferrer" title="TikTok" className="social-icon text-gray-500 hover:text-black">
-                                <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.53.02C13.84.01 15.14 0 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-2.43.05-4.84-.95-6.43-2.8-1.59-1.87-2.36-4.36-2.02-6.77.22-1.55.63-3.09 1.36-4.44.73-1.35 1.74-2.56 2.99-3.56.83-.68 1.74-1.24 2.65-1.74.9-.49 1.82-.9 2.7-1.32v3.34c-.95.5-1.9 1-2.85 1.5-1.06.57-2.08 1.2-3.04 1.94-1.2 1-2.1 2.27-2.7 3.73-.42 1-1.04 2.4-1.18 3.85-.03.36-.05.72-.05 1.09 0 .7.08 1.39.24 2.08.52 2.2 2.16 4.03 4.2 4.9 2.04.87 4.32.94 6.4.24 2.08-.7 3.72-2.2 4.6-4.1.3-.64.5-1.3.6-1.98.02-.18.03-.36.04-.54v-8.7c-2.1-.2-4.1-.9-5.7-2.2-1.6-1.3-2.6-3.3-2.8-5.3-.1-1 .2-2 .8-2.8.1-.1.2-.2.3-.3z"/></svg>
-                            </a>
-                        </div>
-                    </div>
-                    <div className="mt-8 border-t border-gray-200 pt-6 text-center text-sm text-gray-500">
-                        <p className="mb-2">&copy; 2025 Us In Context. All Rights Reserved.</p>
-                        <div className="space-x-4">
-                            <a href="#" className="hover:underline">Privacy Policy</a>
-                            <a href="#" className="hover:underline">Terms of Service</a>
-                            <a href="#" className="hover:underline">Partnerships & Consulting</a>
-                        </div>
-                    </div>
-                </div>
-            </footer>
         </div>
-    );
+     );
 }
