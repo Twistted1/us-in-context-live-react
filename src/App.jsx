@@ -32,9 +32,9 @@ const AnimatedSection = ({ children, className = '' }) => {
   return (
     <div
       ref={ref}
-      className={$ transition-opacity duration-700 ease-out dev{
+      className={`${className} transition-opacity duration-700 ease-out ${
         isVisible ? 'opacity-100' : 'opacity-0 translate-y-5'
-      }}
+      }`}
     >
       {children}
     </div>
@@ -63,7 +63,7 @@ export default function UsInContextPage() {
             <header id="navbar" className="bg-white/95 backdrop-blur-lg sticky top-0 z-50 border-b border-gray-200">
                 <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
                     <a href="#" className="flex items-center space-x-3">
-                        <img src="/logo.jpg" alt="Us In Context Logo" className="w-12 h-12 object-contain" />
+                        <img src="/logo.jpg" alt="Us In Context Logo" className="w-20 h-20 object-contain" />
                         <div className="flex flex-col justify-center">
                             <div className="text-xl font-bold text-gray-900 tracking-wide leading-tight">Us In Context</div>
                             <div className="text-[10px] text-gray-500 tracking-widest leading-tight">CONNECTING PERSPECTIVES</div>
@@ -89,20 +89,23 @@ export default function UsInContextPage() {
 
             <main>
                 <section id="home" className="relative py-24 md:py-40 text-white">
-                    <div 
-                        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                        style={{
-                            backgroundImage: 'url(/hero-bg.png )',
-                        }}
-                    >
-                        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-                    </div>
-                    <div className="container mx-auto px-6 text-center relative z-10">
-                        <h1 className="text-4xl md:text-6xl font-bold leading-tight max-w-4xl mx-auto font-serif">Insightful Analysis for the Engaged Citizen.</h1>
-                        <p className="text-lg md:text-xl text-gray-300 mt-6 max-w-2xl mx-auto">We move beyond the headlines to explore the underlying systems shaping our society with clarity and realism.</p>
-                        <a href="#premium" className="mt-8 inline-block bg-white text-black font-semibold px-8 py-3 rounded-md hover:bg-gray-200 transition-colors">Go Premium</a>
-                    </div>
-                </section>
+    <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+            backgroundImage: 'url(/hero-bg-clean.png)',
+        }}
+    >
+        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+    </div>
+    <div className="container mx-auto px-6 text-center relative z-10">
+        <h1 className="text-4xl md:text-6xl font-bold leading-tight max-w-4xl mx-auto font-serif">Insightful Analysis for the Engaged Citizen.</h1>
+        <p className="text-lg md:text-xl text-gray-300 mt-6 max-w-2xl mx-auto">We move beyond the headlines to explore the underlying systems shaping our society with clarity and realism.</p>
+        <div className="mt-8 space-x-4">
+            <a href="#latest" className="inline-block bg-orange-600 text-white font-semibold px-8 py-3 rounded-md hover:bg-orange-700 transition-colors">READ MORE</a>
+            <a href="#premium" className="inline-block bg-white text-black font-semibold px-8 py-3 rounded-md hover:bg-gray-200 transition-colors">Go Premium</a>
+        </div>
+    </div>
+</section>
 
                 <AnimatedSection>
                     <section id="latest" className="py-20 md:py-28 bg-white">
@@ -117,22 +120,22 @@ export default function UsInContextPage() {
                                         <p className="text-gray-600">An examination of how profit-driven strategies impact society beyond the balance sheet.</p>
                                     </div>
                                 </a>
-                                <div className="article-card block bg-white rounded-lg overflow-hidden border border-gray-200">
-                                    <div className="overflow-hidden"><img src="/political_insights_wip.png" alt="Political Insights - Coming Soon" className="w-full h-48 object-cover" /></div>
+                                <a href="#" className="article-card block bg-white rounded-lg overflow-hidden border border-gray-200">
+                                    <div className="overflow-hidden"><img src="https://images.unsplash.com/photo-1555848962-6e79363bfa19?q=80&w=1920&auto=format&fit=crop" alt="Government building" className="w-full h-48 object-cover" /></div>
                                     <div className="p-6">
                                         <p className="text-sm font-semibold text-purple-600 mb-2">POLITICAL INSIGHTS</p>
-                                        <h3 className="text-xl font-bold mb-3 font-serif">Watch this space</h3>
-                                        <p className="text-gray-600">Exciting political analysis content is coming soon. Stay tuned for in-depth insights.</p>
+                                        <h3 className="text-xl font-bold mb-3 font-serif">The Erosion of Democratic Norms</h3>
+                                        <p className="text-gray-600">Delving into the subtle and overt shifts threatening the foundations of governance.</p>
                                     </div>
-                                </div>
-                                <div className="article-card block bg-white rounded-lg overflow-hidden border border-gray-200">
-                                    <div className="overflow-hidden"><img src="/social_responsibility_wip.png" alt="Social Responsibility - Coming Soon" className="w-full h-48 object-cover" /></div>
+                                </a>
+                                <a href="#" className="article-card block bg-white rounded-lg overflow-hidden border border-gray-200">
+                                    <div className="overflow-hidden"><img src="https://images.unsplash.com/photo-1473773508845-188df298d2d1?q=80&w=1920&auto=format&fit=crop" alt="Wind turbines at sunset" className="w-full h-48 object-cover" /></div>
                                     <div className="p-6">
                                         <p className="text-sm font-semibold text-orange-600 mb-2">SOCIAL RESPONSIBILITY</p>
-                                        <h3 className="text-xl font-bold mb-3 font-serif">Watch this space</h3>
-                                        <p className="text-gray-600">Comprehensive social responsibility analysis is in development. Check back soon.</p>
+                                        <h3 className="text-xl font-bold mb-3 font-serif">Corporate Accountability in Climate Action</h3>
+                                        <p className="text-gray-600">Who is truly responsible for protecting our planet, and who is prioritizing profit?</p>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
                     </section>
