@@ -1,4 +1,4 @@
-ï»¿import React, { useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 const AnimatedSection = ({ children, className = '' }) => {
   const ref = React.useRef(null);
@@ -63,9 +63,9 @@ export default function UsInContextPage() {
             <header id="navbar" className="bg-white/95 backdrop-blur-lg sticky top-0 z-50 border-b border-gray-200">
                 <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
                     <a href="#" className="flex items-center space-x-3">
-                        <img src="/logo.jpg" alt="Us In Context Logo" className="w-20 h-20 object-contain" />
+                        <img src="/logo.jpg" alt="Novus Exchange Logo" className="w-20 h-20 object-contain" />
                         <div className="flex flex-col justify-center">
-                            <div className="text-xl font-bold text-gray-900 tracking-wide leading-tight">Us In Context</div>
+                            <div className="text-xl font-bold text-gray-900 tracking-wide leading-tight">Novus Exchange</div>
                             <div className="text-[10px] text-gray-500 tracking-widest leading-tight">CONNECTING PERSPECTIVES</div>
                         </div>
                     </a>
@@ -149,7 +149,7 @@ export default function UsInContextPage() {
                             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
                                 <div className="tier-card border border-gray-200 rounded-lg p-8">
                                     <h3 className="text-xl font-bold mb-2 font-serif">Supporter</h3>
-                                    <p className="text-4xl font-bold mb-4">Â£5<span className="text-lg font-medium text-gray-500">/month</span></p>
+                                    <p className="text-4xl font-bold mb-4">£5<span className="text-lg font-medium text-gray-500">/month</span></p>
                                     <ul className="text-left space-y-3 text-gray-600 mb-8">
                                         <li className="flex items-center"><svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>Access to all articles</li>
                                         <li className="flex items-center"><svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>Supporter newsletter</li>
@@ -159,7 +159,7 @@ export default function UsInContextPage() {
                                 <div className="tier-card border-2 border-blue-600 rounded-lg p-8 relative">
                                     <div className="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full">MOST POPULAR</div>
                                     <h3 className="text-xl font-bold mb-2 font-serif">Premium</h3>
-                                    <p className="text-4xl font-bold mb-4">Â£10<span className="text-lg font-medium text-gray-500">/month</span></p>
+                                    <p className="text-4xl font-bold mb-4">£10<span className="text-lg font-medium text-gray-500">/month</span></p>
                                     <ul className="text-left space-y-3 text-gray-600 mb-8">
                                         <li className="flex items-center"><svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>Everything in Supporter</li>
                                         <li className="flex items-center"><svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>Exclusive in-depth reports</li>
@@ -169,7 +169,7 @@ export default function UsInContextPage() {
                                 </div>
                                 <div className="tier-card border border-gray-200 rounded-lg p-8">
                                     <h3 className="text-xl font-bold mb-2 font-serif">Partner</h3>
-                                    <p className="text-4xl font-bold mb-4">Â£25<span className="text-lg font-medium text-gray-500">/month</span></p>
+                                    <p className="text-4xl font-bold mb-4">£25<span className="text-lg font-medium text-gray-500">/month</span></p>
                                     <ul className="text-left space-y-3 text-gray-600 mb-8">
                                         <li className="flex items-center"><svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>Everything in Premium</li>
                                         <li className="flex items-center"><svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>Monthly Q&A sessions</li>
@@ -185,9 +185,9 @@ export default function UsInContextPage() {
                 <AnimatedSection>
                     <section id="about" className="py-20 md:py-28 bg-white">
                         <div className="container mx-auto px-6 text-center">
-                            <h2 className="text-3xl md:text-4xl font-bold mb-6 font-serif">About Us In Context</h2>
+                            <h2 className="text-3xl md:text-4xl font-bold mb-6 font-serif">About Novus Exchange</h2>
                             <div className="max-w-3xl mx-auto text-lg text-gray-600 space-y-4">
-                                <p>People deserve more than just headlines. Us In Context was founded to provide the full story, challenging conventional narratives and exposing the complexities of pressing issues.</p>
+                                <p>People deserve more than just headlines. Novus Exchange was founded to provide the full story, challenging conventional narratives and exposing the complexities of pressing issues.</p>
                                 <p>Our mission is to inform, provoke thought, and foster discussion by shining a light on the injustices and abuses of power impacting individuals and society.</p>
                             </div>
                         </div>

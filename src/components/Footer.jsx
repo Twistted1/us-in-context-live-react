@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white text-center p-6">
-      <p className="mb-4">&copy; Us In Context. All rights reserved.</p>
+      <p className="mb-4">&copy; Novus Exchange. All rights reserved.</p>
       <div className="flex justify-center space-x-6">
         <a href="https://twitter.com/UsInContext" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
           <svg className="w-6 h-6 hover:text-blue-400" fill="currentColor" viewBox="0 0 24 24">

@@ -77,7 +77,7 @@ export default function UsInContextPage() {
                             <path d="M16.3333 35.5C19.0952 35.5 21.3333 30.3741 21.3333 24C21.3333 17.6259 19.0952 12.5 16.3333 12.5C13.5714 12.5 11.3333 17.6259 11.3333 24C11.3333 30.3741 13.5714 35.5 16.3333 35.5Z" fill="#A9B4C2" fillOpacity="0.8"/>
                         </svg>
                         <div className="flex flex-col justify-center">
-                            <div className="text-xl font-bold text-gray-900 tracking-wide leading-tight">Us In Context</div>
+                            <div className="text-xl font-bold text-gray-900 tracking-wide leading-tight">Novus Exchange</div>
                             <div className="text-[10px] text-gray-500 tracking-widest leading-tight">CONNECTING PERSPECTIVES</div>
                         </div>
                     </a>
@@ -190,9 +190,9 @@ export default function UsInContextPage() {
                 <AnimatedSection>
                     <section id="about" className="py-20 md:py-28 bg-white">
                         <div className="container mx-auto px-6 text-center">
-                            <h2 className="text-3xl md:text-4xl font-bold mb-6 font-serif">About Us In Context</h2>
+                            <h2 className="text-3xl md:text-4xl font-bold mb-6 font-serif">About Novus Exchange</h2>
                             <div className="max-w-3xl mx-auto text-lg text-gray-600 space-y-4">
-                                <p>People deserve more than just headlines. Us In Context was founded to provide the full story, challenging conventional narratives and exposing the complexities of pressing issues.</p>
+                                <p>People deserve more than just headlines. Novus Exchange was founded to provide the full story, challenging conventional narratives and exposing the complexities of pressing issues.</p>
                                 <p>Our mission is to inform, provoke thought, and foster discussion by shining a light on the injustices and abuses of power impacting individuals and society.</p>
                             </div>
                         </div>
@@ -244,7 +244,7 @@ export default function UsInContextPage() {
                         </div>
                     </div>
                     <div className="mt-8 border-t border-gray-200 pt-6 text-center text-sm text-gray-500">
-                        <p className="mb-2">&copy; 2025 Us In Context. All Rights Reserved.</p>
+                        <p className="mb-2">&copy; 2025 Novus Exchange. All Rights Reserved.</p>
                         <div className="space-x-4">
                             <a href="#" className="hover:underline">Privacy Policy</a>
                             <a href="#" className="hover:underline">Terms of Service</a>

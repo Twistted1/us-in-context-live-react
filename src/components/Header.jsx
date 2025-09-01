@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <header className="bg-gray-900 text-white p-4 shadow-md">
       <div className="flex justify-between items-center max-w-6xl mx-auto">
-        <Link to="/" className="text-xl font-bold">Us In Context</Link>
+        <Link to="/" className="text-xl font-bold">Novus Exchange</Link>
         <div className="relative">
           <button
             onClick={() => setOpen(!open)}

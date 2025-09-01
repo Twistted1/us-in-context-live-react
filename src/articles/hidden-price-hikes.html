@@ -176,7 +176,7 @@ export default function InteractiveReport({ navigateTo }) {
                     <path d="M16.3333 35.5C19.0952 35.5 21.3333 30.3741 21.3333 24C21.3333 17.6259 19.0952 12.5 16.3333 12.5C13.5714 12.5 11.3333 17.6259 11.3333 24C11.3333 30.3741 13.5714 35.5 16.3333 35.5Z" fill="#A9B4C2" fillOpacity="0.8"/>
                 </svg>
                 <div className="flex flex-col justify-center">
-                    <div className="text-xl font-bold text-gray-900 tracking-wide leading-tight">Us In Context</div>
+                    <div className="text-xl font-bold text-gray-900 tracking-wide leading-tight">Novus Exchange</div>
                     <div className="text-[10px] text-gray-500 tracking-widest leading-tight">CONNECTING PERSPECTIVES</div>
                 </div>
             </a>

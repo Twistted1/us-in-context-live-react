@@ -1,4 +1,4 @@
-# Us In Context – Live Website Setup
+# Novus Exchange – Live Website Setup
 
 ## 🚀 How to Go Live
 
